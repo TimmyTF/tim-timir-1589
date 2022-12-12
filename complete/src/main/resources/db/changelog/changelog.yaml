@@ -1,0 +1,47 @@
+databaseChangeLog:
+  - property:
+      dbms: mssql
+      name: now
+      value: getdate()
+  - changeSet:
+      id: create-table-merchant_auth
+      author: flomintv
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: merchant_auth_pkey
+                  name: id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: client_id
+                  type: BIGINT
+              - column:
+                  constraints:
+                    nullable: false
+                  name: refresh_code
+                  type: varchar(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: token
+                  type: varchar(50)
+              - column:
+                  constraints:
+                    nullable: false
+                  name: creation_datetime
+                  type: datetime
+                  defaultValueDate: ${now}
+              - column:
+                  constraints:
+                    nullable: false
+                  name: update_datetime
+                  type: datetime
+                  defaultValueDate: ${now}
+            tableName: merchant_auth

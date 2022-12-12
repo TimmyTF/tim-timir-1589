@@ -1,6 +1,6 @@
-package com.example.restservice.loggers;
+package com.yango.restservice.loggers;
 
-import com.example.restservice.services.LoggingService;
+import com.yango.restservice.services.LoggingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpInputMessage;

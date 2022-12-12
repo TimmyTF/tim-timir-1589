@@ -1,4 +1,4 @@
-package com.example.restservice.services;
+package com.yango.restservice.services;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

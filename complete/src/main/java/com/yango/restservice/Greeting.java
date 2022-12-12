@@ -1,4 +1,4 @@
-package com.example.restservice;
+package com.yango.restservice;
 
 public class Greeting {
 

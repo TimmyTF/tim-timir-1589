@@ -1,4 +1,4 @@
-package com.example.restservice.loggers;
+package com.yango.restservice.loggers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

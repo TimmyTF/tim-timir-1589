@@ -1,4 +1,4 @@
-package com.example.restservice.services;
+package com.yango.restservice.services;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
