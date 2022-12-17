@@ -14,7 +14,7 @@ public class GreetingController {
 
 	private static final Log logger = LogFactory.getLog(GreetingController.class);
 
-	private static final String template = "Hello, %s!";
+	private static final String template = "Helloooooooooooo, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/")
