@@ -4,6 +4,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,13 +15,16 @@ public class GreetingController {
 
 	private static final Log logger = LogFactory.getLog(GreetingController.class);
 
+	@Value("${test.property.change.me}")
+	public String testProperty;
+
 	private static final String template = "Helloooooooooooo, %s!";
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/")
 	public Greeting root(@RequestParam(value = "name", defaultValue = "ML from root") String name) {
 		logger.info("root() has been called");
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+		return new Greeting(counter.incrementAndGet(), String.format(template, testProperty));
 	}
 
 	@GetMapping("/notification")
